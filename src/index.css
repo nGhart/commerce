@@ -1,3 +1,16 @@
+:root {
+  --color1: #69a6d1;
+  --color2: #94dfff;
+  --color3: #c9ebef;
+  --color4: #ffd481;
+  --color5: #fcadb0;
+  --color6: #092b43;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +23,59 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* general */
+a:link {
+  text-decoration: none;
+}
+/* .cardContainer:hover {
+} */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardAddCartButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: var(--color1);
+  color: white;
+  font-weight: 700;
+  padding: 15px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-top-left-radius: 5px;
+}
+.image {
+  height: 250px;
+}
+/* Details */
+.detailLinks {
+  display: flex;
+  width: 100%;
+}
+.detailLinksButtonCart,
+.detailLinksButtonContinue,
+.detailFav {
+  font-weight: 700;
+  background-color: var(--color3);
+  color: var(--color6);
+  padding: 10px;
+  margin: 2px;
+  border: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailLinksButtonCart,
+.detailFav {
+  width: 100%;
+}
+@media screen and (min-width: 100px) {
 }
