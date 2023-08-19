@@ -6,7 +6,7 @@ export const saleItems = [
   {
     image: one,
     itemName: 'cake',
-    price: 20,
+    price: 20.0,
     description:
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.',
     inCart: false,
@@ -17,7 +17,7 @@ export const saleItems = [
   {
     image: two,
     itemName: 'pie',
-    price: 30,
+    price: 30.0,
     description:
       ' Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     inCart: false,
@@ -28,7 +28,7 @@ export const saleItems = [
   {
     image: three,
     itemName: 'donut',
-    price: 40,
+    price: 40.0,
     description:
       ' Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.',
     inCart: false,
@@ -39,7 +39,7 @@ export const saleItems = [
   {
     image: four,
     itemName: 'pie',
-    price: 50,
+    price: 50.0,
     description:
       ' Lorem ipsum dolor sit amet, consectetuer adipiscing elit malesuada libero, sit amet commodo magna eros quis urna.',
     inCart: false,

@@ -39,7 +39,7 @@ a:link {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 4;
+  z-index: 1;
   background-color: var(--color1);
   color: white;
   font-weight: 700;

@@ -8,7 +8,7 @@ class ContextProvider extends Component {
     items: [],
     singleItem: singleItem,
     cart: [],
-    modal: true,
+    openModal: true,
     modalItem: singleItem,
   };
   componentDidMount() {
@@ -54,12 +54,12 @@ class ContextProvider extends Component {
   handleOpenModal = (id) => {
     const item = this.handleGetItem(id);
     this.setState(() => {
-      return { modalItem: item, modal: true };
+      return { modalItem: item, openModal: true };
     });
   };
   handleCloseModal = () => {
     this.setState(() => {
-      return { modal: false };
+      return { openModal: false };
     });
   };
 
@@ -70,7 +70,7 @@ class ContextProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           handleAddCart: this.handleAddCart,
-          modal: this.modal,
+          handleOpenModal: this.handleOpenModal,
           handleCloseModal: this.handleCloseModal,
         }}
       >

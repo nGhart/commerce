@@ -28,7 +28,7 @@ export class Product extends Component {
                       disabled={inCart ? true : false}
                       onClick={() => {
                         hello.handleAddCart(id);
-                        hello.modal(id);
+                        hello.handleOpenModal(id);
                       }}
                     >
                       {inCart ? (

@@ -42,7 +42,7 @@ class Details extends Component {
                               disabled={inCart ? true : false}
                               onClick={() => {
                                 hello.handleAddCart(id);
-                                hello.modal(id);
+                                hello.handleOpenModal(id);
                               }}
                             >
                               {inCart ? (
@@ -57,14 +57,14 @@ class Details extends Component {
                         </Col>
                         <Col>
                           <NavLink>
-                            <button className="detailFav">
+                            <button className="">
                               <i className="fa fa-heart"></i>
                             </button>
                           </NavLink>
                         </Col>
                       </Row>
                       <NavLink to="/">
-                        <button className="detailLinksButtonContinue">
+                        <button className="modalButtonContinue">
                           <p className="mb-0">Continue shopping</p>
                         </button>
                       </NavLink>
