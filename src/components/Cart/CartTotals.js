@@ -11,9 +11,7 @@ function CartTotals({ value }) {
       <Container>
         <Row>
           <Col xs={10} sm={8} className="ml-sm-5 mt-2 ml-md-auto">
-            <NavLink
-            // to="/"
-            >
+            <NavLink>
               <button
                 className="modalButtonContinue"
                 onClick={() => clearCart()}

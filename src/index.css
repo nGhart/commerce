@@ -4,7 +4,12 @@
   --color3: #c9ebef;
   --color4: #ffd481;
   --color5: #fcadb0;
-  --color6: #092b43;
+  --color6: #094772;
+  --color7: #092b43;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 * {
   box-sizing: border-box;
@@ -19,17 +24,56 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background-color: var(--color6);
+  height: 100vh;
 }
+
 /* general */
+.title {
+  text-align: center;
+  font-family: 'Rammetto One', cursive;
+}
 a:link {
   text-decoration: none;
 }
-/* .cardContainer:hover {
-} */
+.font1 {
+  font-family: 'Ceviche One', cursive;
+}
+.font2 {
+  font-family: 'Milonga', cursive;
+}
+.font3 {
+  font-family: 'Rammetto One', cursive;
+}
+.font4 {
+  font-family: 'Sail', cursive;
+}
+
+/* navbar */
+.navbarSection {
+  font-size: 2rem;
+}
+.navbarContainer {
+  background-color: var(--color1);
+  color: var(--color3);
+  border: none;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.cartButton {
+  padding: 10px 5px;
+  background-color: transparent;
+  color: var(--color3);
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+/* product page */
+
 .imageContainer {
   position: relative;
   overflow: hidden;

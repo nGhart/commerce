@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 export class Product extends Component {
   render() {
-    const { image, itemName, price, description, id, inCart } = this.props.item;
+    const { image, itemName, price, id, inCart } = this.props.item;
     return (
       <CardStyling>
         <section>
@@ -47,15 +47,11 @@ export class Product extends Component {
                         justifyContent: 'space-between',
                       }}
                     >
-                      {itemName}
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ color: 'red', border: 'black' }}
-                      >
-                        favorite
+                      {itemName}{' '}
+                      <span>
+                        <Card.Text>GHS {price}</Card.Text>
                       </span>
                     </Card.Title>
-                    <Card.Text>GHS {price}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

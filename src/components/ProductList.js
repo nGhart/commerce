@@ -8,7 +8,7 @@ export class ProductList extends Component {
   render() {
     return (
       <Container>
-        <h1>Products</h1>
+        <h1 className="title">Products</h1>
         <Row xs={2} md={4} className="g-4">
           <ContextConsumer>
             {(hello) => {

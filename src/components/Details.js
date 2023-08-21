@@ -33,7 +33,7 @@ class Details extends Component {
                         {itemName} <span>GHS {price}</span>
                       </Card.Title>
                       <Row className="detailLinks">
-                        <Col xs={9}>
+                        <Col xs={6}>
                           <NavLink to="/cart">
                             <button
                               className="detailLinksButtonCart"
@@ -54,18 +54,13 @@ class Details extends Component {
                           </NavLink>
                         </Col>
                         <Col>
-                          <NavLink>
-                            <button className="">
-                              <i className="fa fa-heart"></i>
+                          <NavLink to="/">
+                            <button className="modalButtonContinue">
+                              <p className="mb-0">Continue shopping</p>
                             </button>
                           </NavLink>
                         </Col>
                       </Row>
-                      <NavLink to="/">
-                        <button className="modalButtonContinue">
-                          <p className="mb-0">Continue shopping</p>
-                        </button>
-                      </NavLink>
 
                       <Card.Text>{description}</Card.Text>
                     </Card.Body>
