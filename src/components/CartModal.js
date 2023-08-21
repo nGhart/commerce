@@ -17,33 +17,10 @@ export class CartModal extends Component {
           } else {
             return (
               <>
-                <div
-                  fluid
-                  style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    display: 'flex',
-                    width: '100%',
-                    height: '100vh',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: '#092b43df',
-                    zIndex: 3,
-                    textAlign: 'center',
-                  }}
-                >
-                  <div
-                    style={{
-                      backgroundColor: '#c9ebef',
-                      padding: '20px',
-                      margin: '20px',
-                    }}
-                  >
+                <div className="modalSection">
+                  <div className="modalContainer">
                     <div>
-                      <p>Added to Cart</p>
+                      <p className="title modalName">Added to Cart</p>
                     </div>
                     <div>
                       <img
@@ -53,16 +30,13 @@ export class CartModal extends Component {
                       />
                     </div>
                     <div>
-                      <p>{hello.modalItem.itemName}</p>
-                      <p>GHS {hello.modalItem.price}</p>
+                      <p className="itemName">{hello.modalItem.itemName}</p>
+                      <p className="currency">
+                        GHS{' '}
+                        <span className="price">{hello.modalItem.price}</span>
+                      </p>
                     </div>
-                    <div
-                      className="modalLinks"
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                      }}
-                    >
+                    <div className="modalLinks">
                       <NavLink to="/">
                         <button
                           className="detailLinksButtonContinue"

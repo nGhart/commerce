@@ -14,7 +14,7 @@ export class Product extends Component {
           <ContextConsumer>
             {(hello) => (
               <Col>
-                <Card className="cardContainer" style={{ height: '350px' }}>
+                <Card className="cardContainer">
                   <div
                     className="imageContainer"
                     onClick={() => hello.handleDetail(id)}
@@ -40,18 +40,11 @@ export class Product extends Component {
                       )}
                     </button>
                   </div>
-                  <Card.Body className="cardBody">
-                    <Card.Title
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                      }}
-                    >
-                      {itemName}{' '}
-                      <span>
-                        <Card.Text>GHS {price}</Card.Text>
-                      </span>
-                    </Card.Title>
+                  <Card.Body className="cardBody left">
+                    <h2 className="itemName">{itemName}</h2>
+                    <p className="currency">
+                      GHS <span className="price">{price}</span>
+                    </p>
                   </Card.Body>
                 </Card>
               </Col>

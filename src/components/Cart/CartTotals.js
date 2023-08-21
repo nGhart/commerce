@@ -7,31 +7,33 @@ import Col from 'react-bootstrap/Col';
 function CartTotals({ value }) {
   const { subtotal, tax, total, clearCart } = value;
   return (
-    <>
-      <Container>
-        <Row>
-          <Col xs={10} sm={8} className="ml-sm-5 mt-2 ml-md-auto">
-            <NavLink>
-              <button
-                className="modalButtonContinue"
-                onClick={() => clearCart()}
-              >
-                <p className="mb-0">Clear cart</p>
-              </button>
-            </NavLink>
-            <h3>
-              Subtotal: GHS <span className="totals">{subtotal}</span>
+    <Container>
+      <Row className="cartTitle">
+        <Col
+          xs={10}
+          sm={8}
+          className="left"
+          //className="ml-sm-5 mt-2 ml-md-auto"
+        >
+          <NavLink>
+            <button className="clearButton" onClick={() => clearCart()}>
+              <p className="mb-0">Clear cart</p>
+            </button>
+          </NavLink>
+          <div className="font2">
+            <h4>
+              Subtotal: <span className="total">GHS {subtotal}</span>
+            </h4>
+            <h4>
+              Tax: <span className="total"> GHS {tax}</span>
+            </h4>
+            <h3 className="totals">
+              Total: GHS<span> {total}</span>
             </h3>
-            <h3>
-              Tax: GHS <span className="totals">{tax}</span>
-            </h3>
-            <h3>
-              Total: GHS <span className="totals">{total}</span>
-            </h3>
-          </Col>
-        </Row>
-      </Container>
-    </>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

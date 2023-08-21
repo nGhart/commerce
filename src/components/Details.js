@@ -14,26 +14,33 @@ class Details extends Component {
           const { id, image, itemName, price, description, inCart } =
             hello.singleItem;
           return (
-            <Container>
-              <Card>
+            <Container className="detailsSection">
+              <Card className="detailsContainer">
                 <Row>
                   <Col md={8}>
-                    <Card.Img variant="top" src={image} />
+                    <Card.Img
+                      variant="top"
+                      src={image}
+                      className="detailImage"
+                    />
                   </Col>
-
                   <Col>
-                    {' '}
                     <Card.Body>
                       <Card.Title
+                        className="itemName"
                         style={{
                           display: 'flex',
                           justifyContent: 'space-between',
                         }}
                       >
-                        {itemName} <span>GHS {price}</span>
+                        {itemName}
+                        <div>
+                          <span className="currency">GHS</span>{' '}
+                          <span className="price"> {price}</span>
+                        </div>
                       </Card.Title>
-                      <Row className="detailLinks">
-                        <Col xs={6}>
+                      <Row className="detailLinks font3">
+                        <Col xs={6} sm={12}>
                           <NavLink to="/cart">
                             <button
                               className="detailLinksButtonCart"
@@ -55,14 +62,16 @@ class Details extends Component {
                         </Col>
                         <Col>
                           <NavLink to="/">
-                            <button className="modalButtonContinue">
+                            <button className="detailLinksButtonContinue">
                               <p className="mb-0">Continue shopping</p>
                             </button>
                           </NavLink>
                         </Col>
                       </Row>
 
-                      <Card.Text>{description}</Card.Text>
+                      <Card.Text className="description">
+                        {description}
+                      </Card.Text>
                     </Card.Body>
                   </Col>
                 </Row>

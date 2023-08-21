@@ -6,25 +6,25 @@ import Col from 'react-bootstrap/Col';
 function Columns() {
   return (
     <>
-      <Container fluid className="text-center d-none d-lg-block">
-        <Row>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Product</p>
+      <Container className="text-center d-none d-md-block">
+        <Row className="my-1 cartTitle font5">
+          <Col xs={10} md={2}>
+            <div>Product</div>
           </Col>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Name</p>
+          <Col xs={10} md={2} className="mx-auto">
+            <p className="mb-0">Name</p>
           </Col>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Price</p>
+          <Col xs={10} md={2} className="mx-auto">
+            <p className="mb-0">Price</p>
           </Col>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Quantity</p>
+          <Col xs={10} md={2} className="mx-auto">
+            <p className="mb-0">Quantity</p>
           </Col>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Remove</p>
+          <Col xs={10} md={2} className="mx-auto">
+            <p className="mb-0">Remove</p>
           </Col>
-          <Col xs={10} lg={2} className="mx-auto">
-            <p>Total</p>
+          <Col xs={10} md={2} className="mx-auto">
+            <p className="mb-0">Total</p>
           </Col>
         </Row>
       </Container>
@@ -33,4 +33,3 @@ function Columns() {
 }
 
 export default Columns;
-// d - none

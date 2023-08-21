@@ -23,9 +23,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color6) !important;
 }
 .App {
-  background-color: var(--color6);
+  /* background-color: var(--color6); */
   height: 100vh;
 }
 
@@ -33,6 +35,11 @@ body {
 .title {
   text-align: center;
   font-family: 'Rammetto One', cursive;
+  color: var(--color2);
+}
+.subtitle {
+  text-align: center;
+  color: var(--color5);
 }
 a:link {
   text-decoration: none;
@@ -49,14 +56,24 @@ a:link {
 .font4 {
   font-family: 'Sail', cursive;
 }
+.font5 {
+  font-family: 'Lobster', cursive;
+}
+
+.left {
+  text-align: left;
+}
+img {
+  border: 2px solid var(--color4);
+}
 
 /* navbar */
 .navbarSection {
   font-size: 2rem;
 }
 .navbarContainer {
-  background-color: var(--color1);
-  color: var(--color3);
+  background-color: var(--color7);
+  /* color: var(--color3); */
   border: none;
   height: 100%;
   margin: 0;
@@ -65,7 +82,7 @@ a:link {
 .cartButton {
   padding: 10px 5px;
   background-color: transparent;
-  color: var(--color3);
+  color: var(--color2);
   border: none;
   width: 30px;
   height: 30px;
@@ -73,12 +90,16 @@ a:link {
   align-items: center;
 }
 /* product page */
-
+.cardContainer {
+  height: 350px;
+}
 .imageContainer {
   position: relative;
   overflow: hidden;
 }
-
+.image {
+  height: 250px;
+}
 .cardAddCartButton {
   position: absolute;
   right: 0;
@@ -95,36 +116,160 @@ a:link {
   border: none;
   border-top-left-radius: 5px;
 }
-.image {
-  height: 250px;
+.itemName {
+  font-family: 'Lobster', cursive;
 }
+.currency {
+  font-family: 'Rammetto One', cursive;
+}
+.price {
+  font-size: 26px;
+  font-family: 'Lobster', cursive;
+}
+
 /* Details */
+.detailsSection {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailImage {
+  height: 400px;
+}
 .detailLinks {
   display: flex;
   width: 100%;
 }
 .detailLinksButtonCart,
 .detailLinksButtonContinue,
-.detailFav {
+.detailFav,
+.emptyLinksButton,
+.clearButton,
+.defaultButton {
   font-weight: 700;
   background-color: var(--color3);
   color: var(--color6);
   padding: 10px;
   margin: 2px;
-  border: none;
+  border-color: var(--color6);
+  border-radius: 5px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.detailLinksButtonCart,
-.detailFav {
+.detailLinksButtonCart {
   width: 100%;
 }
 
-.detailLinksButtonContinue {
-  background-color: var(--color6);
-  color: var(--color3);
+.detailLinksButtonContinue,
+.defaultButton {
+  background-color: var(--color5);
+  color: var(--color6);
 }
-@media screen and (min-width: 100px) {
+.detailLinksButtonContinue:hover,
+.defaultButton {
+  background-color: var(--color6);
+  color: var(--color4);
+}
+.description {
+  font-family: 'Milonga', cursive;
+}
+
+/* error page */
+.errorPage {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errorContainer {
+  background-color: #fcadb0ac;
+  padding: 120px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--color3), 2px 3px 7px var(--color4);
+}
+.errorText {
+  color: var(--color7);
+}
+.emptyLinks {
+  display: flex;
+  justify-content: center;
+}
+.emptyLinks button:hover {
+  background-color: var(--color5);
+  border-color: var(--color5);
+}
+
+/* added to cart modal */
+.modalSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #092b43df;
+  z-index: 3;
+  text-align: center;
+}
+.modalContainer {
+  background-color: var(--color3);
+  padding: 20px;
+  margin: 20px;
+}
+.modalName {
+  color: var(--color7);
+}
+.modalLinks {
+  display: flex;
+  justify-content: center;
+}
+.modalLinks button:hover {
+  background-color: var(--color4);
+  border-color: var(--color4);
+  color: var(--color7);
+}
+/* cart */
+.cartTitle {
+  background-color: var(--color7);
+  color: var(--color3);
+  font-size: 20px;
+  padding: 10px;
+}
+.cartRow {
+  background-color: var(--color5);
+  padding: 10px;
+}
+.cartRow .itemName {
+  text-align: left;
+  width: 100%;
+}
+.clearButton:hover {
+  background-color: var(--color5);
+}
+@media screen and (max-width: 500px) {
+  .cartContainer {
+    background-color: var(--color5);
+  }
+  .cartRow {
+    background-color: transparent;
+    margin-top: 10px;
+  }
+}
+.totals {
+  font-weight: 700;
+  color: var(--color1);
+}
+@media screen and (min-width: 1000px) {
+  .detailsContainer {
+    max-height: 400px;
+    width: 60%;
+  }
 }

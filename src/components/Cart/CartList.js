@@ -8,7 +8,7 @@ function CartList({ value }) {
   const { cart } = value;
   return (
     <>
-      <Container fluid>
+      <Container>
         {cart.map((item) => {
           return <CartItem key={item.id} item={item} value={value} />;
         })}
