@@ -30,12 +30,18 @@ export class CartModal extends Component {
                     height: '100vh',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'grey',
+                    backgroundColor: '#092b43df',
                     zIndex: 3,
                     textAlign: 'center',
                   }}
                 >
-                  <div>
+                  <div
+                    style={{
+                      backgroundColor: '#c9ebef',
+                      padding: '20px',
+                      margin: '20px',
+                    }}
+                  >
                     <div>
                       <p>Added to Cart</p>
                     </div>
@@ -50,10 +56,27 @@ export class CartModal extends Component {
                       <p>{hello.modalItem.itemName}</p>
                       <p>GHS {hello.modalItem.price}</p>
                     </div>
-                    <div className="modalLinks">
+                    <div
+                      className="modalLinks"
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}
+                    >
                       <NavLink to="/">
-                        <button className="detailLinksButtonContinue">
+                        <button
+                          className="detailLinksButtonContinue"
+                          onClick={() => hello.handleCloseModal()}
+                        >
                           <p className="mb-0">Continue shopping</p>
+                        </button>
+                      </NavLink>
+                      <NavLink to="/cart">
+                        <button
+                          className="detailLinksButtonContinue"
+                          onClick={() => hello.handleCloseModal()}
+                        >
+                          <p className="mb-0">Go to Cart</p>
                         </button>
                       </NavLink>
                     </div>

@@ -7,9 +7,13 @@ class ContextProvider extends Component {
   state = {
     items: [],
     singleItem: singleItem,
-    cart: [],
-    openModal: true,
+    // cart: [],
+    cart: saleItems,
+    openModal: false,
     modalItem: singleItem,
+    subtotal: 0,
+    tax: 0,
+    total: 0,
   };
   componentDidMount() {
     this.setProducts();
@@ -63,6 +67,19 @@ class ContextProvider extends Component {
     });
   };
 
+  increaseCount = (id) => {
+    console.log('+1');
+  };
+
+  decreaseCount = (id) => {
+    console.log('-1');
+  };
+  removeItem = (id) => {
+    console.log('im gone');
+  };
+  clearCart = () => {
+    console.log('its all gone');
+  };
   render() {
     return (
       <cntxt.Provider
@@ -72,6 +89,10 @@ class ContextProvider extends Component {
           handleAddCart: this.handleAddCart,
           handleOpenModal: this.handleOpenModal,
           handleCloseModal: this.handleCloseModal,
+          increaseCount: this.increaseCount,
+          decreaseCount: this.decreaseCount,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart,
         }}
       >
         {this.props.children}

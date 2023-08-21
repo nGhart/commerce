@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import ProductList from './components/ProductList';
 import Default from './components/Default';
 import Details from './components/Details';
