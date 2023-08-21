@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { saleItems, singleItem } from './SaleItems';
-import { toHaveAccessibleDescription } from '@testing-library/jest-dom/matchers';
 
 const cntxt = React.createContext();
 class ContextProvider extends Component {
   state = {
     items: [],
     singleItem: singleItem,
-    // cart: [],
-    cart: saleItems,
+    cart: [],
+    //cart: saleItems,
     openModal: false,
     modalItem: singleItem,
     subtotal: 0,
@@ -51,7 +50,7 @@ class ContextProvider extends Component {
         return { items: tempProducts, cart: [...this.state.cart, item] };
       },
       () => {
-        console.log(this.state);
+        this.handleGetTotals();
       }
     );
   };
@@ -68,17 +67,86 @@ class ContextProvider extends Component {
   };
 
   increaseCount = (id) => {
-    console.log('+1');
+    let tempCart = [...this.state.cart];
+    const selectedItem = tempCart.find((item) => item.id === id);
+    const index = tempCart.indexOf(selectedItem);
+    const pdt = tempCart[index];
+    pdt.count = pdt.count + 1;
+    pdt.total = pdt.count * pdt.price;
+
+    this.setState(
+      () => {
+        return { cart: [...tempCart] };
+      },
+      () => {
+        this.handleGetTotals();
+      }
+    );
   };
 
   decreaseCount = (id) => {
-    console.log('-1');
+    let tempCart = [...this.state.cart];
+    const selectedItem = tempCart.find((item) => item.id === id);
+    const index = tempCart.indexOf(selectedItem);
+    const pdt = tempCart[index];
+    pdt.count = pdt.count - 1;
+
+    if (pdt.count === 0) {
+      this.removeItem(id);
+    } else {
+      pdt.total = pdt.count * pdt.price;
+      this.setState(
+        () => {
+          return { cart: [...tempCart] };
+        },
+        () => {
+          this.handleGetTotals();
+        }
+      );
+    }
   };
   removeItem = (id) => {
-    console.log('im gone');
+    let tempPrdt = [...this.state.items];
+    let tempCart = [...this.state.cart];
+    tempCart = tempCart.filter((item) => item.id !== id);
+    const index = tempPrdt.indexOf(this.handleGetItem(id));
+    let removed = tempPrdt[index];
+    removed.inCart = false;
+    removed.count = 0;
+    removed.total = 0;
+
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+          items: [...tempPrdt],
+        };
+      },
+      () => {
+        this.handleGetTotals();
+      }
+    );
   };
   clearCart = () => {
-    console.log('its all gone');
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.handleGetTotals();
+      }
+    );
+  };
+  handleGetTotals = () => {
+    let subtotal = 0;
+    this.state.cart.map((item) => (subtotal += item.total));
+    const tempTax = subtotal * 0.15;
+    const taxes = parseFloat(tempTax.toFixed(2));
+    const total = subtotal + taxes;
+    this.setState(() => {
+      return { subtotal: subtotal, tax: taxes, total: total };
+    });
   };
   render() {
     return (

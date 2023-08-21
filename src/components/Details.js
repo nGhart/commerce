@@ -34,9 +34,7 @@ class Details extends Component {
                       </Card.Title>
                       <Row className="detailLinks">
                         <Col xs={9}>
-                          <NavLink
-                          // to="/cart"
-                          >
+                          <NavLink to="/cart">
                             <button
                               className="detailLinksButtonCart"
                               disabled={inCart ? true : false}

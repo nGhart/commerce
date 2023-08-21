@@ -3,6 +3,7 @@ import Columns from './Columns';
 import EmptyCart from './EmptyCart';
 import { ContextConsumer } from '../../context';
 import CartList from './CartList';
+import CartTotals from './CartTotals';
 
 export class Cart extends Component {
   render() {
@@ -17,6 +18,7 @@ export class Cart extends Component {
                   <h1>Cart</h1>
                   <Columns />
                   <CartList value={value} />
+                  <CartTotals value={value} />
                 </>
               );
             } else {

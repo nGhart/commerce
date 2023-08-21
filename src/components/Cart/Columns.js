@@ -8,52 +8,22 @@ function Columns() {
     <>
       <Container fluid className="text-center d-none d-lg-block">
         <Row>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Product</p>
           </Col>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Name</p>
           </Col>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Price</p>
           </Col>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Quantity</p>
           </Col>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Remove</p>
           </Col>
-          <Col
-            xs={10}
-            lg={2}
-            className="mx-auto"
-            style={{ backgroundColor: 'red' }}
-          >
+          <Col xs={10} lg={2} className="mx-auto">
             <p>Total</p>
           </Col>
         </Row>

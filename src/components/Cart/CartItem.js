@@ -40,7 +40,7 @@ function CartItem({ item, value }) {
                 alignItems: 'center',
               }}
             >
-              <i className="fa fa-plus"></i>
+              <i className="fa fa-minus"></i>
             </button>
             <button
               style={{
@@ -70,7 +70,7 @@ function CartItem({ item, value }) {
                 alignItems: 'center',
               }}
             >
-              <i className="fa fa-minus"></i>
+              <i className="fa fa-plus"></i>
             </button>
           </div>
         </div>
@@ -92,6 +92,9 @@ function CartItem({ item, value }) {
       </Col>
       <Col xs={10} lg={2} className="mx-auto">
         <p>GHS {total}</p>
+      </Col>
+      <Col xs={10} lg={12} className="mx-auto">
+        <hr></hr>
       </Col>
     </Row>
   );
