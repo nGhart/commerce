@@ -148,6 +148,7 @@ class ContextProvider extends Component {
       return { subtotal: subtotal, tax: taxes, total: total };
     });
   };
+
   render() {
     return (
       <cntxt.Provider

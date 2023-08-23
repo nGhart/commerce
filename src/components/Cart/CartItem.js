@@ -186,4 +186,3 @@ function CartItem({ item, value }) {
 }
 
 export default CartItem;
-// style={{display:"flex", justifyContent:"center", alignItems:"center", height:100%}}

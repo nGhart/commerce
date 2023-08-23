@@ -22,8 +22,36 @@ export class NavigationBar extends Component {
               </NavLink>
               <Nav>
                 <NavLink to="/cart" className="ml-auto">
-                  <button className="cartButton">
-                    <i className="fa fa-shopping-bag"></i>
+                  <button
+                    className="cartButton"
+                    style={{ position: 'relative' }}
+                  >
+                    {/* <div
+                      text="dark"
+                      style={{
+                        position: 'absolute',
+                        bottom: -5,
+                        right: -5,
+                        width: '15px',
+                        height: '15px',
+                        fontSize: '10px',
+                        fontWeight: '700',
+                        backgroundColor: 'var(--color2)',
+                        border: '2px solid var(--color7)',
+                        zIndex: '2',
+                        borderRadius: '50%',
+                        color: 'var(--color7)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <p style={{ margin: 0, padding: 0 }}></p>
+                    </div> */}
+                    <i
+                      className="fa fa-shopping-bag"
+                      style={{ position: 'absolute' }}
+                    ></i>
                   </button>
                 </NavLink>
               </Nav>
