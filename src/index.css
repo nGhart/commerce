@@ -256,7 +256,7 @@ img {
 }
 @media screen and (max-width: 500px) {
   .cartContainer {
-    background-color: var(--color5);
+    background-color: var(--color3);
   }
   .cartRow {
     background-color: transparent;

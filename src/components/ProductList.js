@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 export class ProductList extends Component {
   render() {
     return (
-      <Container>
+      <Container style={{ paddingBottom: '30px' }}>
         <h1 className="title">Products</h1>
         <Row xs={2} md={4} className="g-4">
           <ContextConsumer>

@@ -58,7 +58,7 @@ export class NavigationBar extends Component {
             </Container>
           </Navbar>
 
-          <p className="navbar-brand">Home</p>
+          <p className="navbar-brand">.</p>
         </nav>
       </>
     );
